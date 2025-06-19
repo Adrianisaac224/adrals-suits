@@ -36,6 +36,21 @@ function loadProducts() {
             name: "Black Tuxedo",
             description: "Formal wear for special occasions",
             image: "images/suit3.jpg"
+        },
+        {
+            name: "Black Tuxedo",
+            description: "Formal wear for special occasions",
+            image: "images/suit4.jpg"
+        },
+        {
+            name: "Black Tuxedo",
+            description: "Formal wear for special occasions",
+            image: "images/suit15.jpg"
+        },
+        {
+            name: "Black Tuxedo",
+            description: "Formal wear for special occasions",
+            image: "images/suit20.jpg"
         }
     ];
     
