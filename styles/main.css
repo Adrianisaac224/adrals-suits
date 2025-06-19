@@ -187,15 +187,15 @@ nav {
     opacity: 1;
 }
 
-/* Collection Pages */
-.collection,
-.collection-page {
+/* Gallery Pages */
+.gallery,
+.gallery-page {
     padding: 80px 5%;
     text-align: center;
 }
 
-.collection h2,
-.collection-page h1 {
+.gallery h2,
+.gallery-page h1 {
     font-size: 2.5rem;
     margin-bottom: 50px;
     font-weight: 300;
