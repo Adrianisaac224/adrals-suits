@@ -45,7 +45,7 @@ function loadProducts() {
         {
             name: "Checked Tuxedo",
             description: "Office wear for official days",
-            image: "images/suit15.jpg"
+            image: "images/suit20.jpg"
         },
         {
             name: "Gray Tuxedo",
