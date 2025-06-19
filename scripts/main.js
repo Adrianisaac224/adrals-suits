@@ -44,7 +44,7 @@ function loadProducts() {
         },
         {
             name: "Checked Tuxedo",
-            description: "Formal wear for special occasions",
+            description: "Office wear for official days",
             image: "images/suit15.jpg"
         },
         {
