@@ -23,7 +23,7 @@ function loadProducts() {
     // Sample products - replace with your actual products
     const products = [
         {
-            name: "Classic Navy Suit",
+            name: "Classic Maroon Striped Suit",
             description: "Premium wool blend with perfect tailoring",
             image: "images/suit1.jpg"
         },
@@ -38,19 +38,19 @@ function loadProducts() {
             image: "images/suit3.jpg"
         },
         {
-            name: "Black Tuxedo",
+            name: "Brown Striped",
             description: "Formal wear for special occasions",
             image: "images/suit4.jpg"
         },
         {
-            name: "Black Tuxedo",
+            name: "Checked Tuxedo",
             description: "Formal wear for special occasions",
             image: "images/suit15.jpg"
         },
         {
-            name: "Black Tuxedo",
+            name: "Gray Tuxedo",
             description: "Formal wear for special occasions",
-            image: "images/suit20.jpg"
+            image: "images/suit24.jpg"
         }
     ];
     
