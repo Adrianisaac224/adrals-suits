@@ -1,29 +1,46 @@
-// Image Slider
-document.addEventListener('DOMContentLoaded', function() {
-    const sliderImages = document.querySelectorAll('.slider img');
+// Shared functions
+function loadNavigation() {
+    // Highlight current page in navigation
+    const currentPage = location.pathname.split('/').pop().replace('.html', '');
+    if (currentPage) {
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href').includes(currentPage)) {
+                link.classList.add('active');
+            }
+        });
+    }
+}
+
+// Image Slider for Homepage
+function initSlider() {
+    const slider = document.querySelector('.fullscreen-slider');
+    if (!slider) return;
+    
+    const images = slider.querySelectorAll('img');
     let currentImage = 0;
     
     function changeImage() {
-        sliderImages[currentImage].classList.remove('active');
-        currentImage = (currentImage + 1) % sliderImages.length;
-        sliderImages[currentImage].classList.add('active');
+        images[currentImage].classList.remove('active');
+        currentImage = (currentImage + 1) % images.length;
+        images[currentImage].classList.add('active');
     }
+    
+    // Start with first image
+    images[currentImage].classList.add('active');
     
     // Change image every 5 seconds
     setInterval(changeImage, 5000);
-    
-    // Load products dynamically
-    loadProducts();
-});
+}
 
-// Product Data - You'll update this when adding new products
+// Load Products for Collection Page
 function loadProducts() {
-    const productsContainer = document.querySelector('.products');
+    const productsContainer = document.querySelector('.products-grid');
+    if (!productsContainer) return;
     
-    // Sample products - replace with your actual products
     const products = [
         {
-            name: "Classic Maroon Striped Suit",
+            name: "Classic Navy Suit",
             description: "Premium wool blend with perfect tailoring",
             image: "images/suit1.jpg"
         },
@@ -52,9 +69,9 @@ function loadProducts() {
             description: "Formal wear for special occasions",
             image: "images/suit24.jpg"
         }
+        // Add more products as needed
     ];
     
-    // Generate product cards
     products.forEach(product => {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
@@ -72,3 +89,10 @@ function loadProducts() {
         productsContainer.appendChild(productCard);
     });
 }
+
+// Initialize everything when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    loadNavigation();
+    initSlider();
+    loadProducts();
+});
